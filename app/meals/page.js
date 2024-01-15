@@ -1,26 +1,26 @@
 import React from "react";
 import Link from "next/link";
+import Styles from "./page.module.css";
 
-const page = () => {
+const MealsPage = () => {
   return (
     <>
-      <div>Meal page</div>
-      <p>
-        <Link href="meals/share">share</Link>
-      </p>
-      <p>
-        <Link href={"/"}>Go to Home</Link>
-      </p>
-      <div className="meals">
-        <span>
-          <Link href={"meals/meal-1"}>meal-1</Link>
-        </span>
-        <span>
-          <Link href={"meals/meal-2"}>meal-2</Link>
-        </span>
-      </div>
+      <header className={Styles.header}>
+        <h1>
+          Delicious meals, created
+          <span className={Styles.highlight}>by you</span>
+        </h1>
+
+        <p>
+          Choose your favourite recipe and cook it yourself.It is easy and fun!
+        </p>
+        <p className="Styles cta">
+          <Link href={"meals/share"}>Share Your Faavorite Recipe</Link>
+        </p>
+      </header>
+      <main className={Styles.main}></main>
     </>
   );
 };
 
-export default page;
+export default MealsPage;
