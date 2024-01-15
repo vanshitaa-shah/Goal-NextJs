@@ -1,10 +1,13 @@
-import React from "react";
+import MealItem from "./meal-item";
+import Styles from "./meals-grid.module.css";
 
 const MealsGrid = ({ meals }) => {
   return (
-    <ul>
+    <ul className={Styles.meals}>
       {meals.map((meal) => (
-        <li>a</li>
+        <li key={meal.id}>
+          <MealItem {...meal} />
+        </li>
       ))}
     </ul>
   );
