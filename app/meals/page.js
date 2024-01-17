@@ -23,7 +23,7 @@ const MealsPage = () => {
           Choose your favourite recipe and cook it yourself.It is easy and fun!
         </p>
         <p className={Styles.cta}>
-          <Link href={"meals/share"}>Share Your Faavorite Recipe</Link>
+          <Link href={"meals/share"}>Share Your Favorite Recipe</Link>
         </p>
       </header>
       <main className={Styles.main}>
