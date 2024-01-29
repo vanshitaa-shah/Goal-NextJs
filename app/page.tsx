@@ -6,6 +6,8 @@ import Link from "next/link";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
+  console.log("here", session);
+
   return (
     <div className="p-10">
       <h1>Hello from the index page, this is a public route!</h1>

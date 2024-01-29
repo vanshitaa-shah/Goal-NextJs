@@ -11,9 +11,11 @@ import { authOptions } from "../utils/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import SignInForm from "../components/SignInForm";
+import SignInWithGoogle from "../components/SignInWithGoogle";
 
 const AuthRoute = async () => {
   const session = await getServerSession(authOptions);
+  console.log("hereeeee", session);
 
   //won't let authenticated users access auth route
   if (session) {
@@ -33,6 +35,7 @@ const AuthRoute = async () => {
           <div className="flex flex-col">
             <SignInForm />
             <SignInWithGithub />
+            <SignInWithGoogle />
           </div>
         </CardContent>
       </Card>
